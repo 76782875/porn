@@ -43,7 +43,7 @@ function travis-branch-commit() {
     fi
     local remote=origin
     if [[ $GITHUB_TOKEN ]]; then
-        remote=https://blockall:$GITHUB_TOKEN@github.com/$TRAVIS_REPO_SLUG
+        remote=https://$GITHUB_TOKEN@github.com/$TRAVIS_REPO_SLUG
     fi
     if [[ $TRAVIS_BRANCH != master ]]; then
         msg "not pushing updates to branch $TRAVIS_BRANCH"
